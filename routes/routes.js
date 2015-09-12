@@ -62,16 +62,12 @@ exports.addNewReech = function(req, res){
             function(reech){
                 reech.addNewReech(pg, connectionString, req.params.profId,
                     function(reech){
-                        reech.associateReech(pg, connectionString, req.params.profId
-                            this.id, true, function(didInsertCorrectly){
+                        reech.associateReech(pg, connectionString, req.params.profId,
+                            reech.id, true, function(didInsertCorrectly){
                                 res.json(didInsertCorrectly);
                             })
                     });
-            }),
-    // console.log(req.file);
-    // var fileInfo = req.file;
-    // console.log(req.body);
-    // res.send("File uploaded.");
+            })
 }
 
 
