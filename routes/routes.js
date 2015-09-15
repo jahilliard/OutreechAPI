@@ -43,7 +43,7 @@ exports.checkOrAddProf = function(req, res){
 exports.getReeches = function(req, res){
     var reech = new reechMod();
     reech.getReeches(pg, connectionString, function(retFindRows){
-        res.json(retFindRows);
+        res.send(retFindRows);
     });
 }
 
